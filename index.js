@@ -47,11 +47,7 @@ app.use(cookieParser())
 //router
 
 app.use('/api/v1',indexrouter)
-app.use('/',()=>{
-    res.json({
-        msg:"Nguyễn Hồng Đức "
-    })
-})
+
 
 
 const PORT=process.env.PORT||5000;
