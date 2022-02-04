@@ -55,6 +55,6 @@ app.use('/',()=>{
 const PORT=5000;
 
 
-app.listen(PORT,()=>{
+app.listen(process.env.PORT || 5000,()=>{
     console.log(`Server run ning on port ${PORT}`);
 })
