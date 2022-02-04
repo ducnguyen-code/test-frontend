@@ -45,6 +45,11 @@ app.use(express.urlencoded({extended:false}));
 //router
 
 app.use('/api/v1',indexrouter)
+app.use('/',()=>{
+    res.json({
+        msg:"Nguyễn Hồng Đức "
+    })
+})
 
 
 const PORT=5000;
