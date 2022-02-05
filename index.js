@@ -8,6 +8,8 @@ const connectDB=require('./config/database')
 
 const app=express();
 
+const cors=require('cors')
+
 const bodyparser=require('body-parser')
 
 const indexrouter=require('./routers/indexRoute')
@@ -20,6 +22,7 @@ require('dotenv').config();
 connectDB();
 //middlewware
 app.use(cookieParser())
+app.use(cors())
 app.use(express.json())
 app.use(cookieParser())
 
@@ -47,7 +50,6 @@ app.use(cookieParser())
 //router
 
 app.use('/api/v1',indexrouter)
-
 
 
 const PORT=process.env.PORT||5000;
